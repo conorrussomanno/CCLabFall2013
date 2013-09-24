@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- based on JavaScript and JSON on Lynda.com -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>JavaScript And JSON</title>
+	</head>
+	<body>
+
+		<h2>Links</h2>
+		<ul id="links">
+		</ul>
+
+		<script>
+
+		var myInfo = {
+		"name"  : "Noa",
+		"month" : "February",
+		"day"   : 7,
+		"links" : { 
+			"website"  : "http://noadol.com/",
+		    "blog"     : "http://noadol.tumblr.com/",
+			"vimeo"    : "https://vimeo.com/noadol",
+			"linked"   : "http://www.linkedin.com/in/noadolberg" 
+			}
+		};
+
+		var output = "";
+
+		for ( key in myInfo.links ) {
+			if (myInfo.links.hasOwnProperty(key)) {
+				output += '<li>' +
+				'<a href = "' + myInfo.links[key] +
+				'" target="_blank">' + key + '</a>' +
+				'</li>';
+			} //if the links has the key property
+		} // for...go through each link
+
+		var update = document.getElementById('links');
+		update.innerHTML = output;
+		
+		</script>
+	</body>
+</html>

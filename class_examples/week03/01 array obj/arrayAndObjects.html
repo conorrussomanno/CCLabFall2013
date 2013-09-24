@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>arrayAndObjects</title>
+	</head>
+		<body>
+			<div id='text'>
+			</div>
+			<script type="text/javascript">
+			
+			//creating an array w/ an array in side of an array
+			var myArray = ["this is an array", 2, 13.3, false, ["dog", "cat", 22]];
+			console.log(myArray.length);
+			console.log(myArray[2]);
+			document.getElementById('text').innerHTML = myArray[4][0];
+			for (var i = 0; i < myArray.length; i++){
+				console.log(myArray[i]);
+			}
+			//object literal notation
+			var myObj = {
+				name : "Conor",
+				month  : "October",
+				day    : 29,
+				city : function(){
+					document.getElementById('text').innerHTML = "Washington D.C.";
+				}, interests: [
+					"dancing","play the accordion", "yoga"
+					]
+			}
+			alert(myObj.month + ' ' + myObj.day + ' ' + myObj.interests[1]); 
+			myObj.city();
+
+			//object constructor
+			var anotherObj = new Object();
+
+			anotherObj.name = 'Bob';
+			anotherObj.country = function() {
+				console.log('Bobland');
+			};
+			anotherObj.country();
+			</script>
+<!-- 			debugging in the browser - tricks! -->		
+		</body>
+</html>

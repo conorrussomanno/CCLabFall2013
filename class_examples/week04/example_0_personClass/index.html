@@ -1,0 +1,48 @@
+
+<html>
+	<head>
+		<title>Class Example</title>
+	</head>
+	<body id="theBody">
+		<script>
+			// Define a class like this
+			function Person(_name, _gender, _hairColor){
+			   // Add object properties like this
+			   this.name = _name;
+			   this.gender = _gender;
+			   this.hairColor = _hairColor;
+
+			}
+
+			// Add methods like this.  All Person objects will be able to invoke this
+			Person.prototype.speak = function(){
+			    alert("Howdy, my name is" + this.name);
+			}
+
+			Person.prototype.tellGender = function(){
+				alert("I am a " + this.gender);
+			}
+
+			Person.prototype.tellHairColor = function(){
+				alert("I have " + this.hairColor);
+			}
+
+			Person.prototype.spewLifeStory = function(){
+				this.speak();
+				this.tellGender();
+				this.tellHairColor();
+			}
+
+			// Instantiate new objects with 'new'
+			var person = new Person("Bob", "M", "Brown");
+			var person2 = new Person("Jane", "F", "Purple");
+			var person3 = new Person("Sally", "M", "Green");
+
+			// Invoke methods like this
+			person.speak(); // alerts "Howdy, my name is Bob"
+			person.tellGender();
+			person3.spewLifeStory();
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>JSON01</title>
+	</head>
+	<body>
+		<!-- parsing JSON into a JS object and accessing elements -->
+		<div id="tst"></div>
+
+		<script type="text/javascript">
+			var info = {
+						"key_One" : "two little dogs",
+						"key_Two" : "22 and 2",
+						"key_Three" : [ "cat", "ginger cat","angry cat"],
+						"lalalala"  : "babababa"
+						}
+			console.log(info.key_Three[1]);
+
+			var update = document.getElementById('tst');
+			update.innerHTML = info.key_Two;
+		</script>
+	</body>
+</html>
